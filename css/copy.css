@@ -1,0 +1,292 @@
+.page {
+	overflow: hidden;
+}
+
+/*
+* @section      Page Header
+* @description  This section holds specific style redeclarations for some
+*               of common elements in page header
+*/
+.page-head {
+	background-color: #1b1b1b;
+}
+
+/*
+* @section      Page Content
+* @description  This section holds specific style redeclarations for some
+*               of common elements in page content
+*/
+.page-content {
+	position: relative;
+	z-index: 1;
+}
+
+/*
+* @section      Page Footer
+* @description  This section holds specific style redeclarations for some
+*               of common elements in page footer
+*/
+.page-foot {
+	padding: 32px 0;
+	background-color: #1b1b1b;
+}
+
+@media (min-width: 768px) {
+	.page-foot {
+		padding: 64px 0;
+	}
+}
+.rd-navbar-wrap, .rd-navbar-static .rd-navbar-megamenu,
+.rd-navbar-fullwidth .rd-navbar-megamenu, .rd-navbar-fixed .rd-navbar-nav-wrap, .rd-navbar-fixed .rd-navbar-submenu {
+	transition: 0.3s all cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.rd-navbar, .rd-navbar.rd-navbar--is-clone {
+	display: none;
+}
+
+.rd-navbar-fixed,
+.rd-navbar-static,
+.rd-navbar-fullwidth,
+.rd-navbar-sidebar {
+	display: block;
+}
+
+.rd-navbar--no-transition, .rd-navbar--no-transition * {
+	transition: none !important;
+}
+
+.rd-navbar-wrap {
+	position: relative;
+	z-index: 10;
+}
+.rd-navbar-static .rd-navbar-inner,
+.rd-navbar-fullwidth .rd-navbar-inner {
+	position: relative;
+	max-width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.rd-navbar-static .rd-navbar-inner {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 37px 15px;
+}
+.rd-navbar-static.rd-navbar--is-clone .rd-navbar-inner, .rd-navbar-static.rd-navbar--is-stuck .rd-navbar-inner {
+	padding: 11px 15px;
+}
+.rd-navbar-static .rd-navbar-panel {
+	min-width: 270px;
+}
+.rd-navbar-static.rd-navbar--is-clone .rd-navbar-panel, .rd-navbar-static.rd-navbar--is-stuck .rd-navbar-panel {
+	position: relative;
+	top: 2px;
+}
+.rd-navbar-fullwidth.rd-navbar--is-stuck .rd-navbar-panel {
+	display: none;
+}
+.rd-navbar-fixed .rd-navbar-panel {
+	display: flex;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	padding: 4px;
+	height: 56px;
+	color: #fff;
+	z-index: 999;
+}
+
+.rd-navbar-fixed .rd-navbar-panel:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	box-shadow: none;
+	border-bottom: 1px solid rgba(27, 27, 27, 0.2);
+	background: #1b1b1b;
+}
+.rd-navbar-fixed.rd-navbar--is-clone .rd-navbar-panel {
+	transform: translateY(-110%);
+}
+
+.rd-navbar-fixed.rd-navbar--is-clone.rd-navbar--is-stuck .rd-navbar-panel {
+	transform: translateY(0);
+}
+.rd-navbar-brand {
+	display: inline-block;
+	transition: none !important;
+	font-weight: 300;
+}
+
+.rd-navbar-brand > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.rd-navbar-brand .icon {
+	margin-right: 20px;
+}
+
+.rd-navbar-brand .icon, .rd-navbar-brand .icon:focus, .rd-navbar-brand .icon:active, .rd-navbar-brand .icon:hover {
+	color: #3ec7c2;
+}
+
+.rd-navbar-brand .brand-name {
+	font-size: 36px;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.rd-navbar-brand .brand-name, .rd-navbar-brand .brand-name:focus, .rd-navbar-brand .brand-name:active, .rd-navbar-brand .brand-name:hover {
+	color: #3ec7c2;
+}
+.rd-navbar-static.rd-navbar--is-clone .rd-navbar-brand .icon, .rd-navbar-static.rd-navbar--is-stuck .rd-navbar-brand .icon {
+	position: relative;
+	top: 2px;
+	width: 37px;
+	height: 37px;
+	font-size: 37px;
+	line-height: 37px;
+	margin-right: 8px;
+}
+
+.rd-navbar-static.rd-navbar--is-clone .rd-navbar-brand > *, .rd-navbar-static.rd-navbar--is-stuck .rd-navbar-brand > * {
+	font-size: 30px;
+}
+.rd-navbar-fixed .rd-navbar-brand {
+	position: fixed;
+	top: 12px;
+	left: 64px;
+	z-index: 17;
+	display: block;
+	overflow: hidden;
+	text-align: left;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.rd-navbar-fixed .rd-navbar-brand .brand-logo .icon {
+	width: auto;
+	height: auto;
+	font-size: 32px;
+	line-height: 32px;
+	margin-right: 12px;
+}
+
+.rd-navbar-fixed .rd-navbar-brand .brand-name {
+	margin-top: -1px;
+	font-size: 32px;
+}
+.rd-navbar-sidebar .rd-navbar-brand {
+	text-align: center;
+}
+.rd-navbar-brand .brand-name {
+	font-size: 36px;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.rd-navbar-brand .brand-name, .rd-navbar-brand .brand-name:focus, .rd-navbar-brand .brand-name:active, .rd-navbar-brand .brand-name:hover {
+	color: #3ec7c2;
+}
+.rd-navbar-fixed .rd-navbar-brand .brand-name {
+	margin-top: -1px;
+	font-size: 32px;
+}
+@media (max-width: 1199px) {
+	.rd-navbar-fixed.rd-navbar--on-search .brand-name {
+		opacity: 0;
+		visibility: hidden;
+		transform: scale(0.7);
+	}
+}
+.rd-navbar-toggle {
+	display: inline-block;
+	position: relative;
+	width: 48px;
+	height: 48px;
+	line-height: 48px;
+	cursor: pointer;
+	color: white;
+	background-color: black!important;
+	border: none;
+	display: none;
+}
+
+.rd-navbar-toggle span {
+	position: relative;
+	display: block;
+	margin: auto;
+	transition: .3s all ease;
+}
+
+.rd-navbar-toggle span:after, .rd-navbar-toggle span:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -8px;
+	transition: .3s all ease;
+}
+
+.rd-navbar-toggle span:after {
+	top: 8px;
+}
+
+.rd-navbar-toggle span:after, .rd-navbar-toggle span:before, .rd-navbar-toggle span {
+	width: 24px;
+	height: 4px;
+	background-color: black;
+	backface-visibility: hidden;
+	border-radius: 2px;
+}
+
+.rd-navbar-toggle span {
+	transform: rotate(180deg);
+}
+
+.rd-navbar-toggle span:before, .rd-navbar-toggle span:after {
+	transform-origin: 1.71429px center;
+	transform-origin: 1.71429px center;
+}
+
+.rd-navbar-toggle.active span {
+	transform: rotate(360deg);
+}
+
+.rd-navbar-toggle.active span:before, .rd-navbar-toggle.active span:after {
+	top: 0;
+	width: 15px;
+}
+
+.rd-navbar-toggle.active span:before {
+	-webkit-transform: rotate3d(0, 0, 1, -40deg);
+	transform: rotate3d(0, 0, 1, -40deg);
+}
+
+.rd-navbar-toggle.active span:after {
+	-webkit-transform: rotate3d(0, 0, 1, 40deg);
+	transform: rotate3d(0, 0, 1, 40deg);
+}
+
+.rd-navbar-toggle:focus {
+	outline: none;
+}
+.rd-navbar-fixed .rd-navbar-toggle {
+	display: inline-block;
+}
+
+
+
+
